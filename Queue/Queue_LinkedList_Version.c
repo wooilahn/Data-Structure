@@ -5,7 +5,7 @@
 /* structure of Node */
 typedef struct Node {
 	int data;
-	Node* next;
+	struct Node* next;
 }Node;
 
 
@@ -64,16 +64,17 @@ void DeQueue(Queue** queue) {
 	}
 }
 
+/* function to get front value of queue */
 int getFrontValue(Queue** queue) {
 	if ((*queue)->count == 0) {
 		printf("Queue is Empty! Program end!\n");
 		exit(1);
 	}
-	else 
+	else
 		return (*queue)->front->data;
 }
 
-/* function to return count of queue*/
+/* function to return count of queue */
 int getNodeCount(Queue** queue) {
 	return (*queue)->count;
 }
@@ -82,7 +83,7 @@ int getNodeCount(Queue** queue) {
 void DestoryQueue(Queue **queue) {
 	int cnt = (*queue)->count;
 
-	for (int i = 0; i < cnt; i++) 
+	for (int i = 0; i < cnt; i++)
 		DeQueue(queue);
 
 	(*queue)->front = (*queue)->end = NULL;
@@ -130,3 +131,4 @@ int main() {
 
 	return 0;
 }
+
