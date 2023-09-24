@@ -1,5 +1,5 @@
 # Data_Structure
-Implement various data structure (Stack, Queue, etc.)
+Implement various data structure (Stack, Queue, etc.)   
 
 ## List of Data Structure
 * **Queue**
